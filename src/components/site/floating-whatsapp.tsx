@@ -33,8 +33,8 @@ export function FloatingWhatsApp() {
     >
       <div className="relative">
         {/* Pulsing ring */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
-        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] shadow-xl shadow-[#25D366]/40 flex items-center justify-center transition-colors">
+        <span className="absolute inset-0 rounded-full bg-[#C97B3C] animate-ping opacity-30" />
+        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full bg-[#C97B3C] hover:bg-[#A85F26] shadow-xl shadow-[#C97B3C]/40 flex items-center justify-center transition-colors">
           <WhatsAppIcon className="h-7 w-7 md:h-8 md:w-8 text-white" />
         </div>
         {/* Tooltip */}

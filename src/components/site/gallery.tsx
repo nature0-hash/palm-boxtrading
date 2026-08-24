@@ -49,48 +49,6 @@ const brandCardMap: Record<BrandId, React.ComponentType<{ variant?: "large" | "s
   nordstrom: NordstromCard,
 };
 
-/**
- * Bento layout plan for featured cards (6 large + 14 small).
- * Each "tile" controls its size, rotation, and which brand it shows.
- * This is intentionally asymmetric and different from Jiro's uniform grid.
- */
-const bentoTiles: Array<{
-  id: BrandId;
-  variant: "large" | "small";
-  span: string; // tailwind grid span classes
-  rotate?: string;
-}> = [
-  // Row 1 - 4 large featured
-  { id: "amazon",       variant: "large", span: "sm:col-span-2 sm:row-span-2" },
-  { id: "steam",        variant: "large", span: "sm:col-span-2 sm:row-span-2" },
-  { id: "playstation",  variant: "large", span: "sm:col-span-2 sm:row-span-2" },
-  { id: "itunes",       variant: "large", span: "sm:col-span-2 sm:row-span-2" },
-
-  // Row 2 - small cards in between
-  { id: "google-play",  variant: "small", span: "" },
-  { id: "xbox",         variant: "small", span: "" },
-  { id: "ebay",         variant: "small", span: "" },
-  { id: "sephora",      variant: "small", span: "" },
-
-  // Row 3 - small cards
-  { id: "netflix",      variant: "small", span: "" },
-  { id: "spotify",      variant: "small", span: "" },
-  { id: "visa",         variant: "small", span: "" },
-  { id: "mastercard",   variant: "small", span: "" },
-
-  // Row 4 - small cards
-  { id: "walmart",      variant: "small", span: "" },
-  { id: "target",       variant: "small", span: "" },
-  { id: "best-buy",     variant: "small", span: "" },
-  { id: "apple-store",  variant: "small", span: "" },
-
-  // Row 5 - small cards
-  { id: "nike",         variant: "small", span: "" },
-  { id: "adidas",       variant: "small", span: "" },
-  { id: "macys",        variant: "small", span: "" },
-  { id: "nordstrom",    variant: "small", span: "" },
-];
-
 export function Gallery() {
   // Marquee list of all card names for the bottom scrolling strip
   const marquee = [...giftCards, ...giftCards];
@@ -118,25 +76,27 @@ export function Gallery() {
           </h2>
           <p className="mt-4 text-base md:text-lg text-[#1A1A1A]/70">
             We accept and pay out for all major gift card brands from around the
-            world. Don&apos;t see your card? Just ask — we likely support it.
+            world. Don&apos;t see your card? Just ask, we likely support it.
           </p>
         </motion.div>
 
-        {/* Bento grid - asymmetric layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-5 mb-16 auto-rows-[minmax(0,1fr)]">
-          {bentoTiles.map((tile, i) => {
-            const CardComponent = brandCardMap[tile.id];
+        {/* Uniform responsive grid, well arranged on every screen size.
+            Mobile: 2 cols, Tablet: 3 cols, Desktop: 4 cols, Wide: 5 cols.
+            All cards use the same variant so rows stay perfectly aligned. */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-5 mb-16">
+          {giftCards.map((card, i) => {
+            const CardComponent = brandCardMap[card.id];
             return (
               <motion.div
-                key={`tile-${tile.id}`}
+                key={`card-${card.id}`}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.05 }}
+                transition={{ duration: 0.4, delay: (i % 5) * 0.05 }}
                 whileHover={{ y: -6, rotate: i % 2 === 0 ? -1.2 : 1.2 }}
-                className={`cursor-pointer ${tile.span}`}
+                className="cursor-pointer"
               >
-                <CardComponent variant={tile.variant} />
+                <CardComponent variant="large" />
               </motion.div>
             );
           })}
@@ -149,7 +109,7 @@ export function Gallery() {
               ...and we&apos;re always adding more
             </h3>
             <p className="text-sm text-[#1A1A1A]/70 mt-1">
-              Hover to pause the strip. Don&apos;t see your card? Reach out — we
+              Hover to pause the strip. Don&apos;t see your card? Reach out, we
               probably trade it.
             </p>
           </div>

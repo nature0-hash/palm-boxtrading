@@ -79,7 +79,7 @@ export function Contact() {
             <ContactRow
               icon={MessageCircle}
               title="WhatsApp"
-              value="Chat with us — fastest response"
+              value="Chat with us, fastest response"
               sub="Available 24/7"
               href={whatsappLink("Hello Palmbox Trading, I'd like to trade a gift card.")}
               accent="green"
@@ -141,7 +141,7 @@ function ContactRow({
   accent: "green" | "copper" | "emerald";
 }) {
   const accentClasses = {
-    green: "bg-[#25D366]/15 text-[#1EBE5D]",
+    green: "bg-[#C97B3C]/15 text-[#C97B3C]",
     copper: "bg-[#C97B3C]/15 text-[#C97B3C]",
     emerald: "bg-[#0C3B2E]/10 text-[#0C3B2E]",
   };
@@ -213,7 +213,7 @@ function QuickForm() {
       <input
         value={cardValue}
         onChange={(e) => setCardValue(e.target.value)}
-        placeholder="Card value (e.g. $100)"
+        placeholder="Card value (e.g. 100 USD)"
         className="w-full px-4 py-3 rounded-xl bg-[#FAF6EE] border border-[#E6DCC8] text-sm text-[#0C3B2E] placeholder:text-[#1A1A1A]/40 focus:outline-none focus:border-[#0C3B2E] focus:ring-2 focus:ring-[#0C3B2E]/10 transition-all"
       />
       <textarea
@@ -225,7 +225,7 @@ function QuickForm() {
       />
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#25D366] hover:bg-[#1EBE5D] rounded-full transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-[#25D366]/25"
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-[#C97B3C] hover:bg-[#A85F26] rounded-full transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-[#C97B3C]/25"
       >
         <Send className="h-5 w-5" />
         Send via WhatsApp

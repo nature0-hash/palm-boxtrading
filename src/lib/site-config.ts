@@ -40,7 +40,7 @@ export const siteConfig = {
   description:
     "Palmbox Trading Limited is a global gift card trading partner. We deliver secure transactions, instant payouts, and the most competitive rates for gift cards worldwide.",
 
-  // Real company WhatsApp number — only displayed visually in the footer.
+  // Real company WhatsApp number. Only displayed visually in the footer.
   whatsappNumber: "2349010808521",
   whatsappDisplay: "+234 901 080 8521",
   email: "support@palmboxtrading.com",
@@ -80,7 +80,7 @@ export const trustBadges = [
     title: "Bank-Grade Security",
     description:
       "Every trade is processed through encrypted, verified channels. Your cards and your payouts stay protected from start to finish.",
-    stat: "100%",
+    stat: "Always",
     statLabel: "Secure",
   },
   {
@@ -133,7 +133,7 @@ export const giftCards: GiftCardBrand[] = [
 ];
 
 /**
- * Live rate ticker data — used in the scrolling marquee strip below the hero.
+ * Live rate ticker data, used in the scrolling marquee strip below the hero.
  * Rates are illustrative and clearly framed as "indicative" in the UI.
  */
 export const liveRates: { brand: string; rate: string }[] = [

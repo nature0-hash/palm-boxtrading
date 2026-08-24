@@ -69,7 +69,7 @@ const tradeSteps = [
     step: "04",
     title: "Get paid instantly",
     description:
-      "Choose your preferred payout — bank transfer, mobile money, or local payment — and receive your cash in minutes.",
+      "Choose your preferred payout: bank transfer, mobile money, or local payment. Receive your cash in minutes.",
     icon: Wallet,
   },
 ];
@@ -125,14 +125,14 @@ export function Services() {
                 </h3>
                 <p className="mt-3 text-sm text-white/70 max-w-sm">
                   Amazon, Steam, iTunes, Google Play, Xbox, PlayStation, Sephora,
-                  Visa, Mastercard and many more — all in one place.
+                  Visa, Mastercard and many more. All in one place.
                 </p>
               </div>
 
               <div className="relative mt-8 grid grid-cols-3 gap-3">
                 <SpotlightStat value="~10 min" label="Avg payout" />
                 <SpotlightStat value="20+" label="Card brands" />
-                <SpotlightStat value="100%" label="Secure" />
+                <SpotlightStat value="Secure" label="Always" />
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export function Services() {
               <p className="text-white/75 leading-relaxed mb-6">
                 Palmbox Trading Limited gives you a smooth, transparent, and
                 fast way to exchange gift cards for cash. We work with individual
-                traders, retailers, and bulk resellers — always with upfront
+                traders, retailers, and bulk resellers, always with upfront
                 rates, real-time updates, and guaranteed payouts.
               </p>
 

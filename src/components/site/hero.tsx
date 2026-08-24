@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Zap, Star } from "lucide-react";
+import { ArrowRight, ShieldCheck, Star } from "lucide-react";
 import { WhatsAppButton } from "./whatsapp-button";
 import {
   AmazonCard,
@@ -145,15 +145,15 @@ function CardWall() {
             </div>
             <div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-[#C97B3C] font-semibold">
-                Verified Payout
+                Verified Payouts
               </div>
-              <div className="text-xs font-semibold">$2,847 paid today</div>
+              <div className="text-xs font-semibold">Traded worldwide</div>
             </div>
           </div>
         </div>
         {/* Top brand chip */}
         <div className="absolute top-6 left-6 inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 rounded-full px-3 py-1">
-          <span className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" />
+          <span className="h-2 w-2 rounded-full bg-[#C97B3C] animate-pulse" />
           <span className="text-[10px] font-semibold text-white uppercase tracking-wider">
             Live trading floor
           </span>
@@ -170,12 +170,6 @@ function CardWall() {
           className="relative z-30"
         >
           <AmazonCard variant="large" />
-          <FloatingBadge
-            className="-top-3 -right-3"
-            color="emerald"
-            icon={<Zap className="h-3.5 w-3.5" />}
-            label="96% rate"
-          />
         </motion.div>
 
         {/* Top-right small cards stack */}
@@ -206,12 +200,6 @@ function CardWall() {
           className="relative z-30"
         >
           <ITunesCard variant="large" />
-          <FloatingBadge
-            className="-bottom-3 -left-3"
-            color="copper"
-            icon={<ShieldCheck className="h-3.5 w-3.5" />}
-            label="Secured"
-          />
         </motion.div>
       </div>
 
@@ -233,31 +221,6 @@ function CardWall() {
       >
         <VisaCard variant="small" className="w-28 h-20" />
       </motion.div>
-    </div>
-  );
-}
-
-function FloatingBadge({
-  className = "",
-  color,
-  icon,
-  label,
-}: {
-  className?: string;
-  color: "emerald" | "copper";
-  icon: React.ReactNode;
-  label: string;
-}) {
-  const colorClasses = {
-    emerald: "bg-[#0C3B2E] text-white",
-    copper: "bg-[#C97B3C] text-white",
-  };
-  return (
-    <div
-      className={`absolute inline-flex items-center gap-1.5 ${colorClasses[color]} rounded-full px-2.5 py-1 text-[10px] font-bold shadow-lg ${className}`}
-    >
-      {icon}
-      {label}
     </div>
   );
 }

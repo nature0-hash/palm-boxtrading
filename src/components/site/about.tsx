@@ -43,7 +43,7 @@ const stats = [
   { icon: Users, value: "12K+", label: "Happy traders" },
   { icon: Award, value: "20+", label: "Card brands" },
   { icon: Globe2, value: "40+", label: "Countries served" },
-  { icon: ShieldCheck, value: "100%", label: "Secure payouts" },
+  { icon: ShieldCheck, value: "Always", label: "Secure payouts" },
 ];
 
 export function About() {
@@ -69,7 +69,7 @@ export function About() {
             <p className="mt-5 text-base md:text-lg text-[#1A1A1A]/80 leading-relaxed">
               Palmbox Trading Limited is a global gift card trading company
               built on trust, speed, and fairness. We help individuals and
-              businesses convert unused gift cards into real cash — quickly,
+              businesses convert unused gift cards into real cash, quickly,
               securely, and at the best possible rates.
             </p>
             <p className="mt-4 text-base text-[#1A1A1A]/70 leading-relaxed">
@@ -83,7 +83,7 @@ export function About() {
             <p className="mt-4 text-base text-[#1A1A1A]/70 leading-relaxed">
               Our mission is simple: make gift card trading fast, transparent,
               and accessible to everyone, everywhere. When you trade with us,
-              you get upfront rates, real-time updates, and guaranteed payouts —
+              you get upfront rates, real-time updates, and guaranteed payouts,
               every single time.
             </p>
 
@@ -117,7 +117,7 @@ export function About() {
                     </h3>
                     <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
                       To make gift card trading simple, fast, and fair for
-                      everyone — delivering instant payouts and the most
+                      everyone, delivering instant payouts and the most
                       competitive rates, every single time.
                     </p>
                   </div>

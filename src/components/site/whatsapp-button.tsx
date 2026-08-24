@@ -26,7 +26,7 @@ export function WhatsAppButton({
 
   const variantClasses = {
     green:
-      "bg-[#25D366] text-white hover:bg-[#1EBE5D] shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40",
+      "bg-[#C97B3C] text-white hover:bg-[#A85F26] shadow-lg shadow-[#C97B3C]/25 hover:shadow-[#C97B3C]/40",
     outline:
       "bg-transparent text-[#0C3B2E] border-2 border-[#0C3B2E]/30 hover:border-[#0C3B2E] hover:bg-[#0C3B2E] hover:text-white",
     dark: "bg-[#0C3B2E] text-[#FAF6EE] hover:bg-[#145E48] shadow-lg shadow-[#0C3B2E]/25",

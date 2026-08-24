@@ -90,9 +90,9 @@
   --sidebar-border: #E6DCC8;
   --sidebar-ring: #C97B3C;
 
-  /* WhatsApp brand green */
-  --whatsapp: #25D366;
-  --whatsapp-dark: #1EBE5D;
+  /* WhatsApp brand token remapped to Palmbox copper */
+  --whatsapp: #C97B3C;
+  --whatsapp-dark: #A85F26;
 
   /* Brand tokens used by site components */
   --palmbox-emerald: #0C3B2E;

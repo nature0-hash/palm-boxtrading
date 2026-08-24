@@ -27,24 +27,18 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 md:h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Brand logo - palm tree icon + wordmark */}
+        {/* Brand wordmark, text only, no logo */}
         <a
           href="#home"
-          className="flex items-center gap-2.5 group"
+          className="flex flex-col leading-none group"
           aria-label={siteConfig.brand}
         >
-          {/* Palmbox palm-mark */}
-          <div className="relative h-10 w-10 rounded-xl bg-gradient-to-br from-[#0C3B2E] to-[#145E48] flex items-center justify-center shadow-md shadow-[#0C3B2E]/20 group-hover:scale-105 transition-transform">
-            <PalmMark className="h-6 w-6 text-[#C97B3C]" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-[#C97B3C] font-semibold">
-              Palmbox
-            </span>
-            <span className="text-sm md:text-base font-extrabold tracking-tight text-[#0C3B2E] group-hover:text-[#145E48] transition-colors">
-              TRADING LIMITED
-            </span>
-          </div>
+          <span className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-[#C97B3C] font-semibold">
+            Palmbox
+          </span>
+          <span className="text-sm md:text-base font-extrabold tracking-tight text-[#0C3B2E] group-hover:text-[#145E48] transition-colors">
+            TRADING LIMITED
+          </span>
         </a>
 
         {/* Desktop nav - centered */}
@@ -105,21 +99,3 @@ export function Navbar() {
   );
 }
 
-/** Stylized palm-leaf mark used as the Palmbox logo glyph. */
-function PalmMark({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
-      {/* Central trunk */}
-      <path d="M11.6 22h.8c.3 0 .5-.2.5-.5v-7.4c0-.3-.2-.5-.5-.5h-.8c-.3 0-.5.2-.5.5v7.4c0 .3.2.5.5.5z" />
-      {/* Palm leaves fanning out */}
-      <path d="M12 4.5c-1.2-1.5-3.4-2.2-5.4-1.7-.3.1-.4.4-.2.6 1.4 1.6 3.4 2.2 5.6 1.8.2 0 .3-.2.3-.4V4.9c0-.1 0-.3-.1-.4h-.2z" />
-      <path d="M12 4.5c1.2-1.5 3.4-2.2 5.4-1.7.3.1.4.4.2.6-1.4 1.6-3.4 2.2-5.6 1.8-.2 0-.3-.2-.3-.4V4.9c0-.1 0-.3.1-.4h.2z" />
-      <path d="M12 6.2c-2-.8-4.3-.5-6 .8-.2.2-.2.5.1.6 2 .9 4.3.5 6-.9.1 0 .1-.2.1-.3v-.1z" />
-      <path d="M12 6.2c2-.8 4.3-.5 6 .8.2.2.2.5-.1.6-2 .9-4.3.5-6-.9-.1 0-.1-.2-.1-.3v-.1z" />
-      <path d="M12 8.2c-1.6-.4-3.4.1-4.6 1.4-.2.2-.1.5.2.5 1.7.3 3.4-.3 4.5-1.6.1-.1.1-.2.1-.3v-.1z" />
-      <path d="M12 8.2c1.6-.4 3.4.1 4.6 1.4.2.2.1.5-.2.5-1.7.3-3.4-.3-4.5-1.6-.1-.1-.1-.2-.1-.3v-.1z" />
-      <path d="M12 10.3c-1 .1-1.9.8-2.4 1.7-.1.2 0 .5.3.5 1-.1 1.9-.7 2.4-1.7.1-.2 0-.4-.3-.5z" />
-      <path d="M12 10.3c1 .1 1.9.8 2.4 1.7.1.2 0 .5-.3.5-1-.1-1.9-.7-2.4-1.7-.1-.2 0-.4.3-.5z" />
-    </svg>
-  );
-}
